@@ -1,0 +1,382 @@
+object dm_Modulo: Tdm_Modulo
+  OldCreateOrder = False
+  Height = 238
+  Width = 337
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      
+        'Database=D:\Almon Talentos Humanos\CadastroCliente\Banco de Dado' +
+        's\WFSoftway.db'
+      'DriverID=SQLite')
+    UpdateOptions.AssignedValues = [uvEUpdate, uvRefreshMode, uvAutoCommitUpdates]
+    UpdateOptions.RefreshMode = rmAll
+    UpdateOptions.AutoCommitUpdates = True
+    Connected = True
+    LoginPrompt = False
+    Transaction = fdTransaction
+    Left = 40
+    Top = 88
+  end
+  object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
+    Left = 72
+    Top = 16
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 200
+    Top = 24
+  end
+  object qryCadCli: TFDQuery
+    CachedUpdates = True
+    Connection = FDConnection1
+    Transaction = fdTransaction
+    SQL.Strings = (
+      'SELECT cdg_cliente,'
+      '       dcr_nome,'
+      '       flg_tipo,'
+      '       nmr_cpfcnpj,'
+      '       nmr_rgie,'
+      '       dat_cadastro,'
+      '       flg_ativo'
+      '  FROM CadCli;')
+    Left = 232
+    Top = 96
+    object qryCadClitrackId: TWideStringField
+      FieldName = 'trackId'
+      Origin = 'trackId'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 32767
+    end
+    object qryCadClicollectionId: TWideStringField
+      FieldName = 'collectionId'
+      Origin = 'collectionId'
+      Size = 32767
+    end
+    object qryCadCliartistId: TWideStringField
+      FieldName = 'artistId'
+      Origin = 'artistId'
+      Size = 32767
+    end
+    object qryCadCliwrapperType: TWideStringField
+      FieldName = 'wrapperType'
+      Origin = 'wrapperType'
+      Size = 32767
+    end
+    object qryCadClikind: TWideStringField
+      FieldName = 'kind'
+      Origin = 'kind'
+      Size = 32767
+    end
+    object qryCadCliartistName: TWideStringField
+      FieldName = 'artistName'
+      Origin = 'artistName'
+      Size = 32767
+    end
+    object qryCadClicollectionName: TWideStringField
+      FieldName = 'collectionName'
+      Origin = 'collectionName'
+      Size = 32767
+    end
+    object qryCadClitrackName: TWideStringField
+      FieldName = 'trackName'
+      Origin = 'trackName'
+      Size = 32767
+    end
+    object qryCadCliartistViewUrl: TWideStringField
+      FieldName = 'artistViewUrl'
+      Origin = 'artistViewUrl'
+      Size = 32767
+    end
+    object qryCadClicollectionViewUrl: TWideStringField
+      FieldName = 'collectionViewUrl'
+      Origin = 'collectionViewUrl'
+      Size = 32767
+    end
+    object qryCadClitrackViewUrl: TWideStringField
+      FieldName = 'trackViewUrl'
+      Origin = 'trackViewUrl'
+      Size = 32767
+    end
+    object qryCadClitrackTimeMillis: TWideStringField
+      FieldName = 'trackTimeMillis'
+      Origin = 'trackTimeMillis'
+      Size = 32767
+    end
+    object qryCadClipreviewUrl: TWideStringField
+      FieldName = 'previewUrl'
+      Origin = 'previewUrl'
+      Size = 32767
+    end
+    object qryCadClinotaMusical: TBCDField
+      FieldName = 'notaMusical'
+      Origin = 'notaMusical'
+      Precision = 1
+      Size = 1
+    end
+  end
+  object fdTransaction: TFDTransaction
+    Connection = FDConnection1
+    Left = 152
+    Top = 88
+  end
+  object qryTelefones: TFDQuery
+    Connection = FDConnection1
+    Transaction = fdTransaction
+    SQL.Strings = (
+      'SELECT cdg_cliente,'
+      '       nmr_telefone'
+      '  FROM CadCliTelefone;'
+      '')
+    Left = 232
+    Top = 144
+    object qryTelefonestrackId: TWideStringField
+      FieldName = 'trackId'
+      Origin = 'trackId'
+      Size = 32767
+    end
+    object qryTelefonescollectionId: TWideStringField
+      FieldName = 'collectionId'
+      Origin = 'collectionId'
+      Size = 32767
+    end
+    object qryTelefonesartistId: TWideStringField
+      FieldName = 'artistId'
+      Origin = 'artistId'
+      Size = 32767
+    end
+    object qryTelefoneswrapperType: TWideStringField
+      FieldName = 'wrapperType'
+      Origin = 'wrapperType'
+      Size = 32767
+    end
+    object qryTelefoneskind: TWideStringField
+      FieldName = 'kind'
+      Origin = 'kind'
+      Size = 32767
+    end
+    object qryTelefonesartistName: TWideStringField
+      FieldName = 'artistName'
+      Origin = 'artistName'
+      Size = 32767
+    end
+    object qryTelefonescollectionName: TWideStringField
+      FieldName = 'collectionName'
+      Origin = 'collectionName'
+      Size = 32767
+    end
+    object qryTelefonestrackName: TWideStringField
+      FieldName = 'trackName'
+      Origin = 'trackName'
+      Size = 32767
+    end
+    object qryTelefonesartistViewUrl: TWideStringField
+      FieldName = 'artistViewUrl'
+      Origin = 'artistViewUrl'
+      Size = 32767
+    end
+    object qryTelefonescollectionViewUrl: TWideStringField
+      FieldName = 'collectionViewUrl'
+      Origin = 'collectionViewUrl'
+      Size = 32767
+    end
+    object qryTelefonestrackViewUrl: TWideStringField
+      FieldName = 'trackViewUrl'
+      Origin = 'trackViewUrl'
+      Size = 32767
+    end
+    object qryTelefonestrackTimeMillis: TWideStringField
+      FieldName = 'trackTimeMillis'
+      Origin = 'trackTimeMillis'
+      Size = 32767
+    end
+    object qryTelefonespreviewUrl: TWideStringField
+      FieldName = 'previewUrl'
+      Origin = 'previewUrl'
+      Size = 32767
+    end
+    object qryTelefonesnotaMusical: TBCDField
+      FieldName = 'notaMusical'
+      Origin = 'notaMusical'
+      Precision = 1
+      Size = 1
+    end
+  end
+  object qryEnderecos: TFDQuery
+    Connection = FDConnection1
+    Transaction = fdTransaction
+    SQL.Strings = (
+      'SELECT cdg_cliente,'
+      '       dcr_logradouro,'
+      '       dcr_numero,'
+      '       dcr_cep,'
+      '       dcr_bairro,'
+      '       dcr_cidade,'
+      '       dcr_uf,'
+      '       dcr_pais'
+      '  FROM CadCliEnderecos;'
+      '')
+    Left = 232
+    Top = 184
+    object WideStringField1: TWideStringField
+      FieldName = 'trackId'
+      Origin = 'trackId'
+      Size = 32767
+    end
+    object WideStringField2: TWideStringField
+      FieldName = 'collectionId'
+      Origin = 'collectionId'
+      Size = 32767
+    end
+    object WideStringField3: TWideStringField
+      FieldName = 'artistId'
+      Origin = 'artistId'
+      Size = 32767
+    end
+    object WideStringField4: TWideStringField
+      FieldName = 'wrapperType'
+      Origin = 'wrapperType'
+      Size = 32767
+    end
+    object WideStringField5: TWideStringField
+      FieldName = 'kind'
+      Origin = 'kind'
+      Size = 32767
+    end
+    object WideStringField6: TWideStringField
+      FieldName = 'artistName'
+      Origin = 'artistName'
+      Size = 32767
+    end
+    object WideStringField7: TWideStringField
+      FieldName = 'collectionName'
+      Origin = 'collectionName'
+      Size = 32767
+    end
+    object WideStringField8: TWideStringField
+      FieldName = 'trackName'
+      Origin = 'trackName'
+      Size = 32767
+    end
+    object WideStringField9: TWideStringField
+      FieldName = 'artistViewUrl'
+      Origin = 'artistViewUrl'
+      Size = 32767
+    end
+    object WideStringField10: TWideStringField
+      FieldName = 'collectionViewUrl'
+      Origin = 'collectionViewUrl'
+      Size = 32767
+    end
+    object WideStringField11: TWideStringField
+      FieldName = 'trackViewUrl'
+      Origin = 'trackViewUrl'
+      Size = 32767
+    end
+    object WideStringField12: TWideStringField
+      FieldName = 'trackTimeMillis'
+      Origin = 'trackTimeMillis'
+      Size = 32767
+    end
+    object WideStringField13: TWideStringField
+      FieldName = 'previewUrl'
+      Origin = 'previewUrl'
+      Size = 32767
+    end
+    object BCDField1: TBCDField
+      FieldName = 'notaMusical'
+      Origin = 'notaMusical'
+      Precision = 1
+      Size = 1
+    end
+  end
+  object qryGeral: TFDQuery
+    CachedUpdates = True
+    Connection = FDConnection1
+    Transaction = fdTransaction
+    SQL.Strings = (
+      'SELECT cdg_cliente,'
+      '       dcr_nome,'
+      '       flg_tipo,'
+      '       nmr_cpfcnpj,'
+      '       nmr_rgie,'
+      '       dat_cadastro,'
+      '       flg_ativo'
+      '  FROM CadCli;')
+    Left = 288
+    Top = 72
+    object WideStringField14: TWideStringField
+      FieldName = 'trackId'
+      Origin = 'trackId'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+      Size = 32767
+    end
+    object WideStringField15: TWideStringField
+      FieldName = 'collectionId'
+      Origin = 'collectionId'
+      Size = 32767
+    end
+    object WideStringField16: TWideStringField
+      FieldName = 'artistId'
+      Origin = 'artistId'
+      Size = 32767
+    end
+    object WideStringField17: TWideStringField
+      FieldName = 'wrapperType'
+      Origin = 'wrapperType'
+      Size = 32767
+    end
+    object WideStringField18: TWideStringField
+      FieldName = 'kind'
+      Origin = 'kind'
+      Size = 32767
+    end
+    object WideStringField19: TWideStringField
+      FieldName = 'artistName'
+      Origin = 'artistName'
+      Size = 32767
+    end
+    object WideStringField20: TWideStringField
+      FieldName = 'collectionName'
+      Origin = 'collectionName'
+      Size = 32767
+    end
+    object WideStringField21: TWideStringField
+      FieldName = 'trackName'
+      Origin = 'trackName'
+      Size = 32767
+    end
+    object WideStringField22: TWideStringField
+      FieldName = 'artistViewUrl'
+      Origin = 'artistViewUrl'
+      Size = 32767
+    end
+    object WideStringField23: TWideStringField
+      FieldName = 'collectionViewUrl'
+      Origin = 'collectionViewUrl'
+      Size = 32767
+    end
+    object WideStringField24: TWideStringField
+      FieldName = 'trackViewUrl'
+      Origin = 'trackViewUrl'
+      Size = 32767
+    end
+    object WideStringField25: TWideStringField
+      FieldName = 'trackTimeMillis'
+      Origin = 'trackTimeMillis'
+      Size = 32767
+    end
+    object WideStringField26: TWideStringField
+      FieldName = 'previewUrl'
+      Origin = 'previewUrl'
+      Size = 32767
+    end
+    object BCDField2: TBCDField
+      FieldName = 'notaMusical'
+      Origin = 'notaMusical'
+      Precision = 1
+      Size = 1
+    end
+  end
+end

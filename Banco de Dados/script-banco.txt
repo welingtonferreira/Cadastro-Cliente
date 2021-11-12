@@ -1,0 +1,41 @@
+PRAGMA foreign_keys = OFF;
+
+CREATE TABLE IF NOT EXISTS CadCli (
+    cdg_cliente  INTEGER        CONSTRAINT codigoCliente NOT NULL
+                                CONSTRAINT codigoCliente PRIMARY KEY ASC AUTOINCREMENT,
+    dcr_nome     STRING         NOT NULL,
+    flg_tipo     INTEGER (1, 1) NOT NULL,
+    nmr_cpfcnpj  VARCHAR        NOT NULL
+                                UNIQUE,
+    nmr_rgie     VARCHAR,
+    dat_cadastro DATE,
+    flg_ativo    BOOLEAN
+);
+
+CREATE TABLE IF NOT EXISTS CadCliEnderecos (
+    cdg_cliente    INTEGER  NOT NULL,
+    dcr_logradouro VARCHAR,
+    dcr_numero     VARCHAR,
+    dcr_cep        VARCHAR,
+    dcr_bairro     VARCHAR,
+    dcr_cidade     VARCHAR,
+    dcr_uf         CHAR (2),
+    dcr_pais       VARCHAR,
+    FOREIGN KEY (
+        cdg_cliente
+    )
+    REFERENCES CadCli (cdg_cliente) 
+);
+
+CREATE TABLE IF NOT EXISTS CadCliTelefone (
+    cdg_cliente  INTEGER NOT NULL,
+    nmr_telefone VARCHAR,
+    FOREIGN KEY (
+        cdg_cliente
+    )
+    REFERENCES CadCli (cdg_cliente) 
+);
+
+PRAGMA foreign_keys = ON;
+
+
