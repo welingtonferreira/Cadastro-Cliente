@@ -101,7 +101,6 @@ type
     procedure lvListaClientesItemClickEx(const Sender: TObject; ItemIndex: Integer; const LocalClickPos: TPointF; const ItemObject: TListItemDrawable);
     procedure rect_NovoClick(Sender: TObject);
   private
-    procedure gravaNotaMusical(pId, pNota: String);
     function SomenteNumero(str: String): String;
     procedure AddTelefone(const pCodCliente: Integer; const pTelefone: String; const pIcon: TStream);
     procedure DelItem(const lvDeletar: TListView; const pIndex, pCodCliente: Integer; pOrigem: String);
@@ -957,44 +956,6 @@ begin
     begin
       ShowMessage('TfrmConsultaMusicas.cbTipoPessoaChange' + #13 + E.Message);
     end
-  end;
-end;
-
-procedure TfrmCadastroCliente.gravaNotaMusical(pId, pNota: String);
-var
-  key: word;
-  key2: char;
-  Shift: TShiftState;
-begin
-  try
-    with dm_Modulo.qryGeral do
-    begin
-      dm_Modulo.fdTransaction.StartTransaction;
-      try
-        Close;
-        SQL.Clear;
-        SQL.Add('update jsonItunesAPI');
-        SQL.Add('   set notaMusical = :notaMusical');
-        SQL.Add(' where trackId = :trackId');
-        ParamByName('trackId').AsString := pId;
-        ParamByName('notaMusical').AsFloat := StrToFloat(pNota);
-        ExecSQL;
-
-        //key := VK_RETURN;
-        if (RowsAffected > 0) then
-        begin
-          edtBuscarClienteKeyDown(edtBuscarCliente, key, key2, Shift);
-        end;
-      except
-        dm_Modulo.fdTransaction.Rollback;
-      end;
-    end;
-  except
-    on E: Exception do
-    begin
-      dm_Modulo.fdTransaction.Rollback;
-      ShowMessage('TfrmConsultaMusicas.gravaNotaMusical' + #13 + E.Message);
-    end;
   end;
 end;
 

@@ -5,14 +5,13 @@ object dm_Modulo: Tdm_Modulo
   object FDConnection1: TFDConnection
     Params.Strings = (
       
-        'Database=D:\Almon Talentos Humanos\CadastroCliente\Banco de Dado' +
-        's\WFSoftway.db'
+        'Database=D:\BACKUP\Testes\CadastroCliente\Banco de Dados\WFSoftw' +
+        'ay.db'
       'LockingMode=Normal'
       'DriverID=SQLite')
     UpdateOptions.AssignedValues = [uvEUpdate, uvRefreshMode, uvAutoCommitUpdates]
     UpdateOptions.RefreshMode = rmAll
     UpdateOptions.AutoCommitUpdates = True
-    Connected = True
     LoginPrompt = False
     Transaction = fdTransaction
     Left = 40

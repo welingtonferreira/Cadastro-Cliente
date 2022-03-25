@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2021/11/10 15:36:12.000.264,D:\Almon Talentos Humanos\CadastroCliente\uCadastroCliente.pas=D:\Runtec - Fase1\Fontes\uConsultaMusicas.pas</Transaction>
-    <Transaction>2021/11/10 15:36:12.000.264,D:\Almon Talentos Humanos\CadastroCliente\uCadastroCliente.fmx=D:\Runtec - Fase1\Fontes\uConsultaMusicas.fmx</Transaction>
-    <Transaction>2021/11/10 17:32:46.000.054,D:\Almon Talentos Humanos\CadastroCliente\uDM_Modulo.pas=D:\Runtec - Fase1\Fontes\uDM_Modulo.pas</Transaction>
-    <Transaction>2021/11/10 17:32:46.000.054,D:\Almon Talentos Humanos\CadastroCliente\uDM_Modulo.dfm=D:\Runtec - Fase1\Fontes\uDM_Modulo.dfm</Transaction>
+    <Transaction>2021/11/10 15:36:12.000.264,D:\Runtec - Fase1\Fontes\uConsultaMusicas.fmx=D:\Almon Talentos Humanos\CadastroCliente\uCadastroCliente.fmx</Transaction>
+    <Transaction>2021/11/10 15:36:12.000.264,D:\Runtec - Fase1\Fontes\uConsultaMusicas.pas=D:\Almon Talentos Humanos\CadastroCliente\uCadastroCliente.pas</Transaction>
+    <Transaction>2021/11/10 17:32:46.000.054,D:\Runtec - Fase1\Fontes\uDM_Modulo.pas=D:\Almon Talentos Humanos\CadastroCliente\uDM_Modulo.pas</Transaction>
+    <Transaction>2021/11/10 17:32:46.000.054,D:\Runtec - Fase1\Fontes\uDM_Modulo.dfm=D:\Almon Talentos Humanos\CadastroCliente\uDM_Modulo.dfm</Transaction>
     <Transaction>2021/11/10 17:32:57.000.617,D:\Almon Talentos Humanos\CadastroCliente\uDM_Modulo.pas=</Transaction>
     <Transaction>2021/11/10 17:33:01.000.795,=D:\Almon Talentos Humanos\CadastroCliente\uDM_Modulo.pas</Transaction>
     <Transaction>2021/11/10 22:18:52.000.007,=D:\Almon Talentos Humanos\CadastroCliente\uFormat.pas</Transaction>
